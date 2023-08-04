@@ -10,7 +10,7 @@ const router = new Router();
 router.post('/api/create', async ctx => {
     const keys = await generateKeyPair()
 
-    const rawData = await fs.readFile('./files/data.json')
+    const rawData = await fs.readFile('../files/data.json')
     const data = JSON.parse(rawData.toString())
     const serverAddress = data['serverAddress']
     const serverPublicKey = data['serverPublicKey']
