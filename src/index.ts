@@ -35,7 +35,7 @@ router.post('/api/create', async ctx => {
     ctx.body = {
         id,
         data,
-        publicKey: serverPublicKey
+        publicKey: keys.publicKey
     }
 })
 
