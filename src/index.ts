@@ -33,7 +33,8 @@ router.post('/api/create', async ctx => {
     await fs.writeFile('./files/data.json', JSON.stringify(data))
 
     ctx.body = {
-        config
+        config,
+        configId
     }
 })
 
