@@ -30,7 +30,7 @@ router.post('/api/create', async ctx => {
     shell.exec(`wg set wg0 peer ${keys.publicKey} allowed-ips 10.8.0.${id}`)
 
     settings['lastConfigId'] = id
-    await fs.writeFile('./files/settings.json', JSON.stringify(data))
+    await fs.writeFile('./files/settings.json', JSON.stringify(settings))
 
     ctx.body = {
         id,
