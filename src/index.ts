@@ -23,7 +23,7 @@ router.post('/api/create', async ctx => {
         '\n' +
         '[Peer]\n' +
         `PublicKey = ${serverPublicKey}\n` +
-        'AllowedIPs = 0.0.0.0/0, ::/0\n' +
+        'AllowedIPs = 0.0.0.0/0\n' +
         `Endpoint = ${serverAddress}:51820\n` +
         'PersistentKeepalive = 21'
 
